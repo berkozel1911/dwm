@@ -1,0 +1,5 @@
+dwm
+dwmblocks
+*.orig
+*.rej
+*.o
