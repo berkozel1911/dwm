@@ -14,21 +14,22 @@ static const int user_bh            = 22;	    /* height of bar */
 static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
-static const char *fonts[]          = { "FontAwesome:style=Regular:size=10", "SFMono:style=Bold:size=10"};
+static const char *fonts[]          = { "FontAwesome:style=Regular:size=10", "SFMono:style=Bold:size=10.5"};
 static const char dmenufont[]       =   "SFMono:style=Bold:size=10";
 
 /* colouring */
-static const char col_bg[] 	     = "#222222";
-static const char col_wsbg[]	     = "#333333";
-static const char col_textws[]	     = "#ffffff";
-static const char col_slwsbox[]	     = "#cca8ff";
-static const char col_slwstext[]     = "#000000";
-static const char col_wintitletext[] = "#e4d1ff";
-static const char *colors[][3]       = {
+static const char titlebar_bg[]  = "#293241";
+static const char titlebar_fg[]  = "#e9d8a6";
+static const char wsbar_bg[] 	 = "#001219";
+static const char wsbar_fg[] 	 = "#e0fbfc";
+static const char selws_bg[] 	 = "#e0fbfc";
+static const char selws_fg[] 	 = "#001219";
+static const char border_focus[] = "#e9d8a6";
+static const char *colors[][3]   = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_textws, col_bg, "#000000" },
-	[SchemeSel]  = { col_slwstext, col_slwsbox,  col_slwsbox  },
-	[SchemeTitle]  = { col_wintitletext, col_wsbg,  "#000000"  },
+	[SchemeNorm] = { wsbar_fg, wsbar_bg, "#000000" },
+	[SchemeSel]  = { selws_fg, selws_bg,  border_focus  },
+	[SchemeTitle]  = { titlebar_fg, titlebar_bg,  "#000000"  },
 };
 
 /* systray */
@@ -50,7 +51,7 @@ static const char *newsboat[]	     = {default_terminal, "-e", "/usr/bin/newsboat
 static const char *calculator[]	     = {default_terminal, "-e", "qalc"};
 static const char *calendar[]	     = {default_terminal, "-e", "calcurse"};
 static const char code_editor[]      = "codium";
-static const char program_launcher[] = "dmenu_run -fn 'SFMono:style=Bold:size=11' -nf '#ffffff' -sf '#000000' -sb '#cca8ff'";
+static const char program_launcher[] = "dmenu_run -fn 'SFMono:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
 static const char screenlocker[]     = "slock";
 static const char screenshot_tool[]  = "flameshot gui";
 
