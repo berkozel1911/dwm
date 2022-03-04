@@ -14,7 +14,7 @@ static const int user_bh            = 22;	    /* height of bar */
 static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
-static const char *fonts[]          = { "FontAwesome:style=Regular:size=10", "SFMono:style=Bold:size=10.5"};
+static const char *fonts[]          = { "FontAwesome:style=Regular:size=10", "SFMono:style=Bold:size=10"};
 static const char dmenufont[]       =   "SFMono:style=Bold:size=10";
 
 /* colouring */
