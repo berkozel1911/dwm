@@ -1,5 +1,5 @@
 dwm
-dwmblocks
+dwmblocks/dwmblocks
 *.orig
 *.rej
 *.o
