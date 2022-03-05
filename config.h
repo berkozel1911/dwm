@@ -64,8 +64,7 @@ static const char medianext[]   = "playerctl next";
 static const char mediaprev[]   = "playerctl previous";
 
 /* keyboard layouts */ 
-static const char layout_tr[] = "setxkbmap -layout tr,tr";
-static const char layout_en[] = "setxkbmap -layout us";
+static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap tr || setxkbmap us";
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -129,8 +128,7 @@ static Key keys[] = {
 	{ 0,				XK_Print,  spawn,	   SHCMD(screenshot_tool) },
 	{ MODKEY, 			XK_F11,	   spawn,	   SHCMD(mediaprev) },
 	{ MODKEY,			XK_F12,    spawn, 	   SHCMD(medianext) },
-	{ MODKEY, 			XK_KP_1,   spawn,	   SHCMD(layout_tr) },
-	{ MODKEY,	   		XK_KP_2,   spawn,	   SHCMD(layout_en) },
+	{ MODKEY,		XK_space,		 spawn,			 SHCMD(flip_kbl) },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
