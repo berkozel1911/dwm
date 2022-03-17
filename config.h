@@ -56,12 +56,12 @@ static const char screenlocker[]     = "slock";
 static const char screenshot_tool[]  = "flameshot gui";
 
 /* multimedia commands */
-static const char playpause[]   = "playerctl play-pause";
+static const char playpause[]   = "playerctl play-pause; pkill -RTMIN+12 dwmblocks";
 static const char audiomute[]   = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
 static const char lowervolume[] = "pactl set-sink-volume @DEFAULT_SINK@ -5%";
 static const char raisevolume[] = "pactl set-sink-volume @DEFAULT_SINK@ +5%";
-static const char medianext[]   = "playerctl next";
-static const char mediaprev[]   = "playerctl previous";
+static const char medianext[]   = "playerctl next; pkill -RTMIN+12 dwmblocks";
+static const char mediaprev[]   = "playerctl previous; pkill -RTMIN+12 dwmblocks";
 
 /* keyboard layouts */ 
 static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap tr || setxkbmap us";
