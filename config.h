@@ -10,12 +10,12 @@ static const unsigned int snap      = 0;       /* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 22;	    /* height of bar */
+static const int user_bh            = 25;	    /* height of bar */
 static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
-static const char *fonts[]          = { "FontAwesome:style=Regular:size=10", "SFMono:style=Bold:size=10"};
-static const char dmenufont[]       =   "SFMono:style=Bold:size=10";
+static const char *fonts[]          = { "SF Mono:style=Semibold:size=11", "Font Awesome 6 Free Regular:style=Regular:size=11", "Font Awesome 6 Brands Regular:style=Regular:size=11", "Font Awesome 6 Free Solid:style=Solid:size=11"};
+static const char dmenufont[]       =   "SF Mono:style=Bold:size=10";
 
 /* colouring */
 static const char titlebar_bg[]  = "#293241";
@@ -40,18 +40,18 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;     /* 0 means no systray */
 
 /* tags */
-static const char *tags[] = { "www", "dev", "doc", "sys", "chat", "gfx", "misc" };
+static const char *tags[] = { "", "", "", "", "", "", "?" };
 
 /* mostly used programs */
 static const char default_terminal[] = "alacritty";
-static const char web_browser[]      = "brave-browser";
+static const char web_browser[]      = "firefox";
 static const char file_manager[]     = "pcmanfm";
 static const char *music_player[]    = {default_terminal, "-e", "/usr/bin/cmus"};
 static const char *newsboat[]	     = {default_terminal, "-e", "/usr/bin/newsboat"};
 static const char *calculator[]	     = {default_terminal, "-e", "qalc"};
 static const char *calendar[]	     = {default_terminal, "-e", "calcurse"};
 static const char code_editor[]      = "codium";
-static const char program_launcher[] = "dmenu_run -fn 'SFMono:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
+static const char program_launcher[] = "dmenu_run -fn 'SF Mono:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
 static const char screenlocker[]     = "slock";
 static const char screenshot_tool[]  = "flameshot gui";
 
@@ -77,7 +77,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int attachbelow = 1;    /* 1 means attach after the currently active window */
