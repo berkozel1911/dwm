@@ -129,7 +129,8 @@ static Key keys[] = {
 	{ 0,				XK_Print,  spawn,	   SHCMD(screenshot_tool) },
 	{ MODKEY, 			XK_F11,	   spawn,	   SHCMD(mediaprev) },
 	{ MODKEY,			XK_F12,    spawn, 	   SHCMD(medianext) },
-	{ MODKEY,		XK_space,		 spawn,			 SHCMD(flip_kbl) },
+	{ MODKEY,			XK_space,  spawn,	   SHCMD(flip_kbl) },
+	{ MODKEY,                       XK_s,      togglesticky,   {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
