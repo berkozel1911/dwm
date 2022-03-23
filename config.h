@@ -53,7 +53,8 @@ static const char *calendar[]	     = {default_terminal, "-e", "calcurse"};
 static const char code_editor[]      = "codium";
 static const char program_launcher[] = "dmenu_run -fn 'SF Mono:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
 static const char screenlocker[]     = "slock";
-static const char screenshot_tool[]  = "flameshot gui";
+static const char ss_save[]  	 	 = "maim -s > ~/Pics/Screenshots/$(date +%d-%m-%Y-%H-%M-%S).png";
+static const char ss_clipboard[]	 = "maim -s | xclip -selection clipboard -t image/png";
 
 /* multimedia commands */
 static const char playpause[]   = "playerctl play-pause; pkill -RTMIN+12 dwmblocks";
@@ -104,33 +105,34 @@ static const Layout layouts[] = {
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          SHCMD(program_launcher) },
-	{ MODKEY,             		XK_Return, spawn,          SHCMD(default_terminal) },
-	{ MODKEY,			XK_F1,	   spawn,	   SHCMD(file_manager) },
-	{ MODKEY, 			XK_F2,	   spawn, 	   SHCMD(web_browser) },
-	{ MODKEY, 			XF86XK_AudioPlay,          spawn, {.v = music_player} },
-	{ MODKEY, 			XK_F3,     spawn, 	   {.v = newsboat} },
-	{ MODKEY, 			XK_F4,	   spawn, 	   SHCMD(code_editor) },
-	{ 0, 				XF86XK_Calculator,         spawn, {.v = calculator} },
-	{ MODKEY,			XK_F5,	   spawn,	   {.v = calendar} },
-	{ MODKEY, 			XK_l,	   spawn, 	   SHCMD(screenlocker) },
-	{ MODKEY,			XK_q, 	   killclient, 	   {0} },
-	{ MODKEY|ControlMask,           XK_space,  layoutscroll,   {.i = +1 } },
-	{ MODKEY,			XK_w,	   focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_w,	   tagmon,	   {.i = +1 } },
-	{ MODKEY,			XK_Tab,	   focusstack,     {.i = +1 } },
-	{ MODKEY, 			XK_Right,  setmfact,       {.f = +0.05} },
-	{ MODKEY, 			XK_Left,   setmfact,       {.f = -0.05} },
-	{ MODKEY|ShiftMask,		XK_space,  togglefloating, {0} },
-	{ 0, 				XF86XK_AudioPlay,          spawn, SHCMD(playpause)},
-	{ 0,				XF86XK_AudioLowerVolume,   spawn, SHCMD(lowervolume) },
-	{ 0,				XF86XK_AudioRaiseVolume,   spawn, SHCMD(raisevolume) },
-	{ 0,				XF86XK_AudioMute,   	   spawn, SHCMD(audiomute) },
-	{ 0,				XK_Print,  spawn,	   SHCMD(screenshot_tool) },
-	{ MODKEY, 			XK_F11,	   spawn,	   SHCMD(mediaprev) },
-	{ MODKEY,			XK_F12,    spawn, 	   SHCMD(medianext) },
-	{ MODKEY,			XK_space,  spawn,	   SHCMD(flip_kbl) },
-	{ MODKEY,                       XK_s,      togglesticky,   {0} },
+	{ MODKEY,            XK_d,      spawn,          SHCMD(program_launcher) },
+	{ MODKEY,            XK_Return, spawn,          SHCMD(default_terminal) },
+	{ MODKEY,			 XK_F1,	    spawn,	   		SHCMD(file_manager) },
+	{ MODKEY, 			 XK_F2,	    spawn, 	   		SHCMD(web_browser) },
+	{ MODKEY, 			 XF86XK_AudioPlay,          spawn, {.v = music_player} },
+	{ MODKEY, 			 XK_F3,     spawn, 	   		{.v = newsboat} },
+	{ MODKEY, 			 XK_F4,	    spawn, 	   		SHCMD(code_editor) },
+	{ 0, 				 XF86XK_Calculator,         spawn, {.v = calculator} },
+	{ MODKEY,			 XK_F5,	    spawn,	   		{.v = calendar} },
+	{ MODKEY, 			 XK_l,	    spawn, 	   		SHCMD(screenlocker) },
+	{ MODKEY,			 XK_q, 	    killclient, 	{0} },
+	{ MODKEY|ControlMask,XK_space,  layoutscroll,   {.i = +1 } },
+	{ MODKEY,			 XK_w,	    focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,	 XK_w,	    tagmon,	   		{.i = +1 } },
+	{ MODKEY,			 XK_Tab,	focusstack,     {.i = +1 } },
+	{ MODKEY, 			 XK_Right,  setmfact,       {.f = +0.05} },
+	{ MODKEY, 			 XK_Left,   setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,	 XK_space,  togglefloating, {0} },
+	{ 0, 				 XF86XK_AudioPlay,          spawn, SHCMD(playpause)},
+	{ 0,				 XF86XK_AudioLowerVolume,   spawn, SHCMD(lowervolume) },
+	{ 0,				 XF86XK_AudioRaiseVolume,   spawn, SHCMD(raisevolume) },
+	{ 0,				 XF86XK_AudioMute,   	   	spawn, SHCMD(audiomute) },
+	{ 0,				 XK_Print,  spawn,	   		SHCMD(ss_clipboard) },
+	{ ShiftMask,		 XK_Print,	spawn,			SHCMD(ss_save) },
+	{ MODKEY, 			 XK_F11,	spawn,	   		SHCMD(mediaprev) },
+	{ MODKEY,			 XK_F12,    spawn, 	   		SHCMD(medianext) },
+	{ MODKEY,			 XK_space,  spawn,	   		SHCMD(flip_kbl) },
+	{ MODKEY,                       XK_s,      		togglesticky,   {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
