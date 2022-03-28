@@ -1,5 +1,7 @@
 /* additional include stuff */
 #include "layouts.c"
+#include "fibonacci.c"
+
 #include <X11/XF86keysym.h>
 
 #define STATUSBAR "dwmblocks"
@@ -89,6 +91,7 @@ static const Layout layouts[] = {
 	{ "| ><>",      NULL },    /* no layout function means floating behavior */
 	{ "| M",        monocle },
 	{ "| #",        grid },
+	{ "| [@]",		  spiral }
 };
 
 /* key definitions */
