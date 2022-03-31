@@ -22,10 +22,10 @@ static const char dmenufont[]       =   "SF Mono:style=Bold:size=10";
 /* colouring */
 static const char titlebar_bg[]  = "#293241";
 static const char titlebar_fg[]  = "#e9d8a6";
-static const char wsbar_bg[] 	 = "#001219";
-static const char wsbar_fg[] 	 = "#e0fbfc";
-static const char selws_bg[] 	 = "#e0fbfc";
-static const char selws_fg[] 	 = "#001219";
+static const char wsbar_bg[] 	 = "#222222";
+static const char wsbar_fg[] 	 = "#ffffff";
+static const char selws_bg[] 	 = "#d6fcba";
+static const char selws_fg[] 	 = "#000000";
 static const char border_focus[] = "#e9d8a6";
 static const char *colors[][3]   = {
 	/*               fg         bg         border   */
@@ -42,7 +42,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;     /* 0 means no systray */
 
 /* tags */
-static const char *tags[] = { "", "", "", "", "", "", "?" };
+static const char *tags[] = { "", "", "", "", "", "", "?" };
 
 /* mostly used programs */
 static const char default_terminal[] = "alacritty";
@@ -68,7 +68,6 @@ static const char mediaprev[]   = "playerctl previous; pkill -RTMIN+12 dwmblocks
 
 /* keyboard layouts */ 
 static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap tr || setxkbmap us";
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
