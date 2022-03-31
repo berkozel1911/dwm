@@ -68,6 +68,7 @@ static const char mediaprev[]   = "playerctl previous; pkill -RTMIN+12 dwmblocks
 
 /* keyboard layouts */ 
 static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap tr || setxkbmap us";
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
