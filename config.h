@@ -42,7 +42,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;     /* 0 means no systray */
 
 /* tags */
-static const char *tags[] = { "", "", "", "", "", "", "?" };
+static const char *tags[] = { "", "", "", "", "", "", ""}; 
 
 /* mostly used programs */
 static const char default_terminal[] = "alacritty";
@@ -67,7 +67,8 @@ static const char medianext[]   = "playerctl next; pkill -RTMIN+12 dwmblocks";
 static const char mediaprev[]   = "playerctl previous; pkill -RTMIN+12 dwmblocks";
 
 /* keyboard layouts */ 
-static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap tr || setxkbmap us";
+
+static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap -layout tr || setxkbmap -layout us";
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -112,7 +113,7 @@ static Key keys[] = {
 	{ MODKEY,            XK_Return, spawn,          SHCMD(default_terminal) },
 	{ MODKEY,			 XK_F1,	    spawn,	   		SHCMD(file_manager) },
 	{ MODKEY, 			 XK_F2,	    spawn, 	   		SHCMD(web_browser) },
-	{ MODKEY, 			 XF86XK_AudioPlay,          spawn, {.v = music_player} },
+	{ 0, 			 XF86XK_Tools,          spawn, {.v = music_player} },
 	{ MODKEY, 			 XK_F3,     spawn, 	   		{.v = newsboat} },
 	{ MODKEY, 			 XK_F4,	    spawn, 	   		SHCMD(code_editor) },
 	{ 0, 				 XF86XK_Calculator,         spawn, {.v = calculator} },
