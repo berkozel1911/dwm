@@ -12,6 +12,7 @@ My custom build of dwm (6.2)
 - systray
 - titlecolor
 - sticky
+- pertag
 
 ### Scripts that used by dwmblocks:
 [Click](https://github.com/berkoezel/dotfiles-n/tree/master/meta-and-helpers/statusbar) to get them. Make sure you copied them to your $PATH.
