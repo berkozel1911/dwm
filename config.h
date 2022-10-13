@@ -12,19 +12,19 @@ static const unsigned int snap      = 0;       /* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 25;	    /* height of bar */
+static const int user_bh            = 23;	    /* height of bar */
 static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
-static const char *fonts[]          = { "SF Mono:style=Semibold:size=11", "Font Awesome 6 Free Regular:style=Regular:size=11", "Font Awesome 6 Brands Regular:style=Regular:size=11", "Font Awesome 6 Free Solid:style=Solid:size=11"};
+static const char *fonts[]          = { "Source Code Pro:style=SemiBold:size=10", "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
 static const char dmenufont[]       =   "SF Mono:style=Bold:size=10";
 
 /* colouring */
-static const char titlebar_bg[]  = "#293241";
-static const char titlebar_fg[]  = "#e9d8a6";
-static const char wsbar_bg[] 	 = "#222222";
-static const char wsbar_fg[] 	 = "#ffffff";
-static const char selws_bg[] 	 = "#d6fcba";
+static const char titlebar_bg[]  = "#112D4E";
+static const char titlebar_fg[]  = "#DBE2EF";
+static const char wsbar_bg[] 	 = "#222831";
+static const char wsbar_fg[] 	 = "#EEEEEE";
+static const char selws_bg[] 	 = "#BBE1FA";
 static const char selws_fg[] 	 = "#000000";
 static const char border_focus[] = "#e9d8a6";
 static const char *colors[][3]   = {
@@ -42,18 +42,18 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;     /* 0 means no systray */
 
 /* tags */
-static const char *tags[] = { "", "", "", "", "", "", ""}; 
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; 
 
 /* mostly used programs */
 static const char default_terminal[] = "alacritty";
-static const char web_browser[]      = "chromium";
+static const char web_browser[]      = "firefox";
 static const char file_manager[]     = "pcmanfm";
 static const char *music_player[]    = {default_terminal, "-e", "/usr/bin/cmus"};
 static const char *newsboat[]	     = {default_terminal, "-e", "/usr/bin/newsboat"};
 static const char *calculator[]	     = {default_terminal, "-e", "qalc"};
 static const char *calendar[]	     = {default_terminal, "-e", "calcurse"};
 static const char code_editor[]      = "codium";
-static const char program_launcher[] = "dmenu_run -fn 'SF Mono:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
+static const char program_launcher[] = "dmenu_run -fn 'Fira Code:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
 static const char screenlocker[]     = "slock";
 static const char ss_save[]  	 	 = "maim -s > ~/Pics/Screenshots/$(date +%d-%m-%Y-%H-%M-%S).png";
 static const char ss_clipboard[]	 = "maim -s | xclip -selection clipboard -t image/png";
