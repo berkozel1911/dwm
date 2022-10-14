@@ -13,6 +13,7 @@
  * @return char* the path of the current executable
  */
 char *get_dwm_path(){
+    /*
     struct stat s;
     int r, length, rate = 42;
     char *path = NULL;
@@ -46,6 +47,9 @@ char *get_dwm_path(){
     path[r] = '\0';
 
     return path;
+    */
+
+    return "/usr/local/bin/dwm";
 }
 
 /**
