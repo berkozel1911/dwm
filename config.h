@@ -16,11 +16,11 @@ static const int user_bh            = 23;	    /* height of bar */
 static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
-static const char *fonts[]          = { "Source Code Pro:style=SemiBold:size=10", "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
+static const char *fonts[]          = { "IBM Plex Mono:style=Semibold:size=10", "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
 
 /* colouring */
-static const char titlebar_bg[]  = "#256D85";
-static const char titlebar_fg[]  = "#DBE2EF";
+static const char titlebar_bg[]  = "#2B4865";
+static const char titlebar_fg[]  = "#EAE3D2";
 static const char wsbar_bg[] 	 = "#222831";
 static const char wsbar_fg[] 	 = "#EEEEEE";
 static const char selws_bg[] 	 = "#BBE1FA";
