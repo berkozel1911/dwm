@@ -1,7 +1,7 @@
 /* additional include stuff */
 #include "layouts.c"
 #include "fibonacci.c"
-
+#include "selfrestart.c"
 #include <X11/XF86keysym.h>
 
 #define STATUSBAR "dwmblocks"
@@ -17,10 +17,9 @@ static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
 static const char *fonts[]          = { "Source Code Pro:style=SemiBold:size=10", "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
-static const char dmenufont[]       =   "SF Mono:style=Bold:size=10";
 
 /* colouring */
-static const char titlebar_bg[]  = "#112D4E";
+static const char titlebar_bg[]  = "#256D85";
 static const char titlebar_fg[]  = "#DBE2EF";
 static const char wsbar_bg[] 	 = "#222831";
 static const char wsbar_fg[] 	 = "#EEEEEE";
@@ -53,7 +52,7 @@ static const char *newsboat[]	     = {default_terminal, "-e", "/usr/bin/newsboat
 static const char *calculator[]	     = {default_terminal, "-e", "qalc"};
 static const char *calendar[]	     = {default_terminal, "-e", "calcurse"};
 static const char code_editor[]      = "codium";
-static const char program_launcher[] = "dmenu_run -fn 'Fira Code:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
+static const char program_launcher[] = "dmenu_run -fn 'Source Code Pro:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
 static const char screenlocker[]     = "slock";
 static const char ss_save[]  	 	 = "maim -s > ~/Pics/Screenshots/$(date +%d-%m-%Y-%H-%M-%S).png";
 static const char ss_clipboard[]	 = "maim -s | xclip -selection clipboard -t image/png";
@@ -145,6 +144,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
 };
 
 /* button definitions */
