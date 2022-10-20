@@ -52,7 +52,7 @@ static const char *newsboat[]	     = {default_terminal, "-e", "/usr/bin/newsboat
 static const char *calculator[]	     = {default_terminal, "-e", "qalc"};
 static const char *calendar[]	     = {default_terminal, "-e", "calcurse"};
 static const char code_editor[]      = "codium";
-static const char program_launcher[] = "dmenu_run -fn 'Source Code Pro:style=Bold:size=11' -nf '#e0fbfc' -sf '#001219' -sb '#e0fbfc'";
+static const char program_launcher[] = "dmenu_run -fn 'Source Code Pro:style=Bold:size=11' -nf '#eae3d2' -sf '#000000' -sb '#bbe1fa'";
 static const char screenlocker[]     = "slock";
 static const char ss_save[]  	 	 = "maim -s > ~/Pics/Screenshots/$(date +%d-%m-%Y-%H-%M-%S).png";
 static const char ss_clipboard[]	 = "maim -s | xclip -selection clipboard -t image/png";
