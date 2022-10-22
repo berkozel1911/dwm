@@ -46,7 +46,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* mostly used programs */
 static const char default_terminal[] = "alacritty";
 static const char web_browser[]      = "firefox";
-static const char file_manager[]     = "pcmanfm";
+static const char file_manager[]     = "thunar";
 static const char *music_player[]    = {default_terminal, "-e", "/usr/bin/cmus"};
 static const char *newsboat[]	     = {default_terminal, "-e", "/usr/bin/newsboat"};
 static const char *calculator[]	     = {default_terminal, "-e", "qalc"};
