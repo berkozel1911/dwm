@@ -16,7 +16,7 @@ static const int user_bh            = 23;	    /* height of bar */
 static const unsigned int gappx     = 18;		/* fullgaps */
 
 /* fonts */
-static const char *fonts[]          = { "IBM Plex Mono:style=Semibold:size=10", "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
+static const char *fonts[]          = { "IBM Plex Mono:style=Semibold:size=10", "JoyPixels:pixelsize=15:antialias=true:autohint=true"};
 
 /* colouring */
 static const char titlebar_bg[]  = "#2B4865";
@@ -67,7 +67,7 @@ static const char mediaprev[]   = "playerctl previous; pkill -RTMIN+12 dwmblocks
 
 /* keyboard layouts */ 
 
-static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap -layout tr || setxkbmap -layout us";
+static const char flip_kbl[] = "setxkbmap -query | grep -q 'us' && setxkbmap -layout tr || setxkbmap -layout us; pkill -RTMIN+13 dwmblocks";
 
 static const Rule rules[] = {
 	/* xprop(1):
