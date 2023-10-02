@@ -58,8 +58,8 @@ static const char playpause[]   = "playerctl play-pause; pkill -RTMIN+12 dwmbloc
 static const char audiomute[]   = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
 static const char lowervolume[] = "pactl set-sink-volume @DEFAULT_SINK@ -5%";
 static const char raisevolume[] = "pactl set-sink-volume @DEFAULT_SINK@ +5%";
-static const char medianext[]   = "playerctl next; pkill -RTMIN+12 dwmblocks";
-static const char mediaprev[]   = "playerctl previous; pkill -RTMIN+12 dwmblocks";
+static const char medianext[]   = "playerctl next"; 
+static const char mediaprev[]   = "playerctl previous";
 
 /* keyboard layouts */ 
 
@@ -124,8 +124,8 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          SHCMD(lowervolume) },
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn,          SHCMD(raisevolume) },
 	{ 0,                            XF86XK_AudioMute,           spawn,          SHCMD(audiomute) },
-	{ MODKEY,                       XF86XK_AudioPrev,           spawn,          SHCMD(mediaprev) },
-	{ MODKEY,                       XF86XK_AudioNext,           spawn,          SHCMD(medianext) },
+	{ 0,                            XF86XK_AudioPrev,           spawn,          SHCMD(mediaprev) },
+	{ 0,                            XF86XK_AudioNext,           spawn,          SHCMD(medianext) },
 	{ MODKEY,                       XK_space,                   spawn,          SHCMD(flip_kbl) },
 	{ MODKEY,                       XK_s,                       togglesticky,   {0} },
         { MODKEY|ShiftMask,             XK_q,                       quit,           {0} },
