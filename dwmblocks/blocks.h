@@ -2,7 +2,7 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "sb-loadavg", 60, 0},
-	{"|🌡", "echo $(sensors | grep 'Package id 0' | awk '{ print $4}' | cut -c 2-3)°C", 60, 0},
+	{"|🌡", "echo CPU: $(sensors | grep 'Package id 0' | awk '{ print $4}' | cut -c 2-3)°C - GPU: $(sensors | grep junction | awk '{print $2}' | cut -c 2-3)°C", 60, 0},
 	{"|", "sb-network", 1, 0},
 	{"|", "sb-memory", 60, 0},
 	{"|", "echo 🌍 $(setxkbmap -query | grep layout | awk '{print $2}')",0 , 13},
