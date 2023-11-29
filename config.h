@@ -19,9 +19,10 @@ static const unsigned int gappx     = 18;	/* fullgaps */
 static const char *fonts[]  = { "MartianMono Nerd Font:style=Medium:size=10", "JoyPixels:pixelsize=15:antialias=true:autohint=true"};
 
 /* colouring */
-static const char titlebar_bg[]  = "#2B4865";
+//static const char titlebar_bg[]  = "#2B4865";
+static const char titlebar_bg[]  = "#113946";
 static const char titlebar_fg[]  = "#EAE3D2";
-static const char wsbar_bg[] 	 = "#222831";
+static const char wsbar_bg[] 	 = "#161A30";
 static const char wsbar_fg[] 	 = "#EEEEEE";
 static const char selws_bg[] 	 = "#BBE1FA";
 static const char selws_fg[] 	 = "#000000";
