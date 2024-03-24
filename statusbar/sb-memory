@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "📟 $(free --giga -h | awk 'NR==2 { print $3"/"$2 }')"
