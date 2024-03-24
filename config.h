@@ -11,20 +11,19 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 0;       	/* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 23;	/* height of bar */
 static const unsigned int gappx     = 18;	/* fullgaps */
 
 /* fonts */
-static const char *fonts[]  = { "MartianMono Nerd Font:style=Medium:size=10", "JoyPixels:pixelsize=15:antialias=true:autohint=true"};
+static const char *fonts[]  = { "GoMono Nerd Font:style=Medium:size=12", "JoyPixels:pixelsize=15:antialias=true:autohint=true"};
 
 /* colouring */
-//static const char titlebar_bg[]  = "#2B4865";
-static const char titlebar_bg[]  = "#113946";
-static const char titlebar_fg[]  = "#EAE3D2";
-static const char wsbar_bg[] 	 = "#161A30";
+static const char titlebar_bg[]  = "#112117";
+static const char titlebar_fg[]  = "#FBFADA";
+static const char wsbar_bg[] 	 = "#040D12";
 static const char wsbar_fg[] 	 = "#EEEEEE";
-static const char selws_bg[] 	 = "#BBE1FA";
+static const char selws_bg[] 	 = "#FBFADA";
 static const char selws_fg[] 	 = "#000000";
 static const char border_focus[] = "#e9d8a6";
 static const char *colors[][3]   = {
