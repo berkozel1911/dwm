@@ -49,7 +49,7 @@ static const char web_browser[]      = "firefox";
 static const char file_manager[]     = "thunar";
 static const char music_player[]     = "spotify";
 static const char code_editor[]      = "codium";
-static const char program_launcher[] = "dmenu_run -fn 'BlexMono Nerd Font:style=Bold:size=11' -nf '#eae3d2' -sf '#000000' -sb '#bbe1fa'";
+static const char program_launcher[] = "dmenu_run -fn 'GoMono Nerd Font:style=Bold:size=13' -nf '#eae3d2' -sf '#000000' -sb '#bbe1fa'";
 static const char screenlocker[]     = "slock";
 static const char take_ss[]	     = "flameshot gui";
 
